@@ -1,36 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Number Triangle</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #e9f7ef;
-        }
-        .triangle {
-            text-align: center;
-            font-size: 20px;
-            color: #2e86c1;
-        }
-    </style>
-</head>
-<body>
-    <div class="triangle">
-        <?php
-        for ($i = 1; $i <= 3; $i++) {
-            for ($j = 1; $j <= $i; $j++) {
-                echo $i . " ";
-            }
-            echo "<br>";
-        }
-        ?>
-    </div>
-</body>
-</html>
+<?php
+echo "1";
+echo "<br>";
+for ($i = 1; $i <= 5; $i++) {
+    echo str_repeat('&nbsp;', (5 - $i) * 2); 
+    echo str_repeat('* ', $i);
+    echo "<br>";
+}
+for ($i = 4; $i >= 1; $i--) {
+    echo str_repeat('&nbsp;', (5- $i) * 2); 
+    echo str_repeat('* ', $i);
+    echo "<br>";
+}
+
+echo "<br><br>";
+echo "2";
+echo "<br><br>";
+for ($i = 1; $i <= 5; $i++) {
+    echo str_repeat('* ', $i);
+    echo "<br>";
+}
+for ($i = 4; $i >= 1; $i--) {
+    echo str_repeat('* ', $i);
+    echo "<br>";
+}
+
+echo "<br><br>"; 
+echo "3";
+echo "<br><br>";
+for ($i = 0; $i <= 5; $i++) {
+    echo str_repeat('&nbsp;', ($i -1) * 0); // إضافة مسافات
+    echo str_repeat('* ', 5- $i);
+    echo "<br>";
+}
